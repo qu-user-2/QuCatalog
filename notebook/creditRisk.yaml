@@ -1,0 +1,12 @@
+
+id: 'credit risk fainess'
+name: 'credit risk fainess'
+description: 'Detecting and mitigating bias on credit decisions using fairlearn and smclarify'
+metadata:
+  annotations:
+    platform: 'QuSandbox'
+implementation:
+  github:
+    source: 'https://colab.research.google.com/drive/1ta4lPHEDAaZxK-09yy03XGkGoWkH82S5?usp=sharing'
+#    requirements: 'https://github.com/IBM/Trusted-ML-Pipelines/blob/master/requirements.txt'
+    # TODO: do not require '==' in elyra-ai/kfp-notebook:"bootstrapper.py", line 369, package_list_to_dict()

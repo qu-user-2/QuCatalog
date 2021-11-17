@@ -1,0 +1,88 @@
+id: LendingClubLoan          # Unique data set id (required)
+name: LendingClubLoan         # User friendly data set name (required)
+description: The data set is the lending data for lendingclub from August 2011 to December 2011 for some borrowers.            # Data set description (required)
+version: 1.0                        # Data set version (required, semver format x.y[.z])
+created: 2021-11-17                 # Data set creation date (ISO-8601 formatted)
+updated: 2021-11-17 
+format:
+  - type: CSV                         # Data set file format (user friendly)
+    url: https://en.wikipedia.org/wiki/Comma-separated_values
+domain: QuSandbox         # application domain, e.g. Natural Language Processing
+
+# Information about the entity that makes the data set available
+provider:                           # Information about the repository that makes the data set available
+  name: Kaggle         # Repository provider name
+  url: https://www.kaggle.com/wendykan/lending-club-loan-data    # Repository provider URL (preferably data set specific)
+
+# identifies where the data set is stored and how it is stored (REQUIRED)
+repository:
+  type: HTTP
+  url: https://qusandbox-dataset.s3.us-west-2.amazonaws.com/LendingClubLoan.csv  # Data set archive download URL
+  mime_type: text/csv  
+  size: 1.2M                          # Data set archive size including units (E, P, T, G, M, K) (which isn't necessarily the size of the data file)
+
+# REQUIRED; data set license information
+license:
+  commercial: false                  # if true, a commercial license (assume false if not set)
+  name: CDLA-Sharing                 # License name
+  url: https://cdla.io/sharing-1-0/  # Link to public license text
+
+# REQUIRED; describes relevant files in the data set archive
+content:
+  - pattern: path/lorem-ipsum1.csv    # includes path
+    description: l-i training data    # free form text describing the file content
+    records: 10000                     # including units (E, P, T, G, M, K), if applicable
+    size: 1.2M                          # size including units (E, P, T, G, M, K), if applicable
+    format: CSV                       # file format (user friendly)
+    type: file                        # "file" | "regex"
+    mime_type: text/csv               # File MIME type (https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)
+    columns:                          # optional; only applies to column-oriented file formats
+      - name: loan_amnt             # 1st column name
+        description: loan amount     # 1st column description
+        type: int                     # 1st column data type (TODO - need to define values for types)
+      - name: term             # 1st column name
+        description: loan term      # 1st column description
+        type: sre                     # 1st column data type (TODO - need to define values for types)
+      - name: int_rate             # 1st column name
+        description: interest rate     # 1st column description
+        type: float                     # 1st column data type (TODO - need to define values for types)
+      - name: installment           # 1st column name
+        description: installment     # 1st column description
+        type: int                     # 1st column data type (TODO - need to define values for types)
+      - name: grade             # 1st column name
+        description: grade     # 1st column description
+        type: str                     # 1st column data type (TODO - need to define values for types)
+      - name: sub_grade             # 1st column name
+        description: sub grade     # 1st column description
+        type: str                     # 1st column data type (TODO - need to define values for types)
+      - name: home_ownership             # 1st column name
+        description: home ownership     # 1st column description
+        type: str                     # 1st column data type (TODO - need to define values for types)
+      - name: annual_inc             # 1st column name
+        description: annual income     # 1st column description
+        type: float                     # 1st column data type (TODO - need to define values for types)
+      - name: verification_status             # 1st column name
+        description: verification status     # 1st column description
+        type: str                     # 1st column data type (TODO - need to define values for types)
+      - name: purpose             # 1st column name
+        description: purpose     # 1st column description
+        type: str                     # 1st column data type (TODO - need to define values for types)
+      - name: addr_state             # 1st column name
+        description: address     # 1st column description
+        type: str                     # 1st column data type (TODO - need to define values for types)
+      - name: dti             # 1st column name
+        description: dti     # 1st column description
+        type: float                     # 1st column data type (TODO - need to define values for types)
+      - name: delinq_2yrs             # 1st column name
+        description: delinq_2yrs     # 1st column description
+        type: int                     # 1st column data type (TODO - need to define values for types)
+      - name: inq_last_6mths             # 1st column name
+        description: inq_last_6mths     # 1st column description
+        type: int                     # 1st column data type (TODO - need to define values for types)
+      - name: loan_status_Binary             # 1st column name
+        description: loan_status_Binary     # 1st column description
+        type: int                     # 1st column data type (TODO - need to define values for types)
+# OPTIONAL; Identifies where the data set was obtained from
+source:
+  name: Kaggle                 # Name of the owning entity
+  url: https://www.kaggle.com/   # Any valid URL for the entity

@@ -1,0 +1,12 @@
+name: Credit Risk
+model_identifier: Credit Risk
+description: A convolutional deep neural network to classify snippets of code
+framework:
+  name: "sklearn"
+  
+domain: "QuSandbox"
+
+serve:
+  servable: true
+  tested_platforms:
+    - fastapi
